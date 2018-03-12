@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1519877304 source:c:\users\annel\downloads\programming\uri online\taligado_codcad\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
