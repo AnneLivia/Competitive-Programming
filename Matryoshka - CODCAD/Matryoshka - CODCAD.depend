@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1520966792 source:c:\users\annel\downloads\programming\uri online\matryoshka - codcad\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
