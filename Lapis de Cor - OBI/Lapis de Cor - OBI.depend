@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1522285048 source:c:\users\annel\downloads\programming\uri online\lapis de cor - obi\main.cpp
+	<iostream>
+	<set>
+	<vector>
+	<algorithm>
+

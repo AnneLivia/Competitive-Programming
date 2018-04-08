@@ -1,37 +1,36 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
-// Must finish later
+
+typedef vector<int> vi;
+
 int main()
 {
-    long int vertices, arestas, mayorOrSec, city1,city2;
-    bool yes;
-    cin >> vertices >> arestas;
-    vector<long int>city[vertices];
-    while(arestas--) {
-        cin >> mayorOrSec >> city1 >> city2;
-        city1--;
-        city2--;
-        yes = false;
+    int n, m, t, a, b;
+    bool flag;
+    vector<vector<int>>v;
+    cin >> n >> m;
 
-        if(mayorOrSec == 1) { // Secretary adding a bridge
-            city[city1].push_back(city2);
-            city[city2].push_back(city1);
-        } else { // Mayor asking if there is a bridge linking the cities
-            for(int i = 0; i < city[city1].size(); i++)
-            {
-                if(city[city1][i] == city2) {
-                    yes = true;
+    // And it's been initialized the vector<int> in each position
+    v.assign(n + 1,vi()); // N + 1 since it's going to start from 1 to the last one. don't start with 0 here
+
+    for ( int i = 1; i <= m; i++) {
+        cin >> t >> a >> b;
+        flag = false;
+        if(t == 1) {
+            v[a].push_back(b);
+            v[b].push_back(a);
+        } else {
+            for ( int j = 0; j < (int)v[a].size(); j++) {
+                if(v[a][j] == b) {
+                    flag = 1;
                     break;
                 }
             }
-            if(yes)
-                cout << "1\n";
-            else
-                cout << "0\n";
+            cout << flag << endl;
         }
     }
+
     return 0;
 }
