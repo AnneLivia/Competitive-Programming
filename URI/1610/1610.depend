@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1523667884 source:c:\users\annel\downloads\programming\estruturas de dados\1610\main.cpp
+	<iostream>
+	<vector>
+	<cstring>
+

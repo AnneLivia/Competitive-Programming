@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1524431200 source:c:\users\annel\downloads\programming\estruturas de dados\2407\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
