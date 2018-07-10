@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1516133090 source:c:\users\annel\downloads\programming\uri online\1021\main.cpp
-	<iostream>
-	<stdio.h>
-	<iomanip>
-	"math.h"
-
