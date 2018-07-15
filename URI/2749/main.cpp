@@ -5,12 +5,11 @@ using namespace std;
 int main()
 {
     cout << "---------------------------------------\n";
-    cout << "|        Roberto                      |\n";
+    cout << "|x = 35                               |\n";
     cout << "|                                     |\n";
-    cout << "|        5786                         |\n";
+    cout << "|               x = 35                |\n";
     cout << "|                                     |\n";
-    cout << "|        UNIFEI                       |\n";
+    cout << "|                               x = 35|\n";
     cout << "---------------------------------------\n";
-
     return 0;
 }
