@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1531536129 source:c:\users\annel\downloads\programming\online judge\spoj\1973\main.cpp
+	<iostream>
+	<cstdio>
+	<vector>
+	<numeric>
+	<set>
+
