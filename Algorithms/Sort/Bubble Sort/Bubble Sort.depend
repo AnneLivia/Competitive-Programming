@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1531764577 source:c:\users\annel\downloads\programming\competitive programming\algorithms\sort\bubble sort\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	<iomanip>
+

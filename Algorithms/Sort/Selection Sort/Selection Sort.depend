@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1531711437 source:c:\users\annel\downloads\programming\competitive programming\data structures\sort\selection sort\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+

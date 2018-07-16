@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1531782161 source:c:\users\annel\downloads\programming\competitive programming\algorithms\search\binary search\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+
