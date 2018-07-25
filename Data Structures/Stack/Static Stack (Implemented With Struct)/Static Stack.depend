@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1532536242 source:c:\users\annel\downloads\programming\competitive programming\data structures\stack\static stack\static_stack.cpp
+	"static_stack.h"
+
+1532535695 c:\users\annel\downloads\programming\competitive programming\data structures\stack\static stack\static_stack.h
+	<cstdlib>
+
+1532536162 source:c:\users\annel\downloads\programming\competitive programming\data structures\stack\static stack\main.cpp
+	<iostream>
+	"static_stack.h"
+
