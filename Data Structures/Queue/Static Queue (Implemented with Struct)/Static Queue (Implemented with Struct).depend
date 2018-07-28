@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1532749989 source:c:\users\annel\downloads\programming\competitive programming\data structures\queue\static queue (implemented with struct)\main.cpp
+	<iostream>
+	"static_queue.h"
+
+1532748832 c:\users\annel\downloads\programming\competitive programming\data structures\queue\static queue (implemented with struct)\static_queue.h
+	<cstdlib>
+
+1532749902 source:c:\users\annel\downloads\programming\competitive programming\data structures\queue\static queue (implemented with struct)\static_queue.cpp
+	"static_queue.h"
+
