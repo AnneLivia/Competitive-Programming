@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1532921410 source:c:\users\annel\downloads\programming\competitive programming\data structures\queue\dynamic queue (implemented with struct)\dynamic_queue.cpp
+	"dynamic_queue.h"
+
+1532901372 c:\users\annel\downloads\programming\competitive programming\data structures\queue\dynamic queue (implemented with struct)\dynamic_queue.h
+	<cstdlib>
+
+1532921342 source:c:\users\annel\downloads\programming\competitive programming\data structures\queue\dynamic queue (implemented with struct)\main.cpp
+	<iostream>
+	"dynamic_queue.h"
+
