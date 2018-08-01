@@ -1,4 +1,5 @@
 #include "binary_tree.h"
+using namespace std;
 
 // Creating tree
 BinaryTree* create_tree() {
@@ -74,7 +75,7 @@ void pre_order(BinaryTree *bt) {
     if(bt != nullptr && *bt != nullptr) { // The binary tree exist and is not empty
         cout << (*bt)->number << endl; // Print the value in the node
         pre_order(&((*bt)->left)); // Left child
-        pre_order(&((bt)->right)); // Right child
+        pre_order(&((*bt)->right)); // Right child
     }
 
     // 2, 4, 1, 2, 3, 9, 13
@@ -102,4 +103,128 @@ void post_order(BinaryTree *bt) {
     }
 
     // 1 2 4 9 13 3 2
+}
+
+// Insert element
+int inserting(BinaryTree *bt, int number) {
+    if(bt == nullptr)
+        return 0; // Error
+    Vertex* v = (Vertex *)malloc(sizeof(Vertex));
+    if(v == nullptr)
+        return 0; // Error
+
+    // Insert number passed and assert left and right to null
+    v->number = number;
+    v->left = v->right = nullptr;
+
+    if(*bt == nullptr) {
+        // If the tree does not have any value
+        *bt = v; // BT will point to v, which is now the root
+    } else {
+        // Find an empty place
+        queue <Vertex *> q;
+        q.push(*bt); // Inserting the root in the queue
+        // While an empty place is not found, the loop will run
+        while(!q.empty()) {
+            Vertex* temp = q.front(); // Getting the first element of the queue
+            q.pop(); // At the beginning the queue has only the root element, and after this pop, this queue is empty
+            if(!temp->left) { // If the temp->left is null, the node will be insert here
+                temp->left = v; // Inserting the new node in the left
+                break;
+            } else {
+                q.push(temp->left); // In case the left side is not empty, insert it in the queue, to in case the right is not empty too, it will search again
+            }
+
+            if(!temp->right) { // Same as above, but now with the right side
+                temp->right = v;
+                break;
+            } else {
+                q.push(temp->right);
+            }
+        }
+    }
+
+    return 1; // Everything went well
+}
+
+// Used to delete the deepest element
+void delete_deepest(BinaryTree *bt, Vertex* v) {
+    queue<Vertex *>q;
+    q.push(*bt);
+
+    // Find deepest node
+    Vertex *temp;
+    while(!q.empty()) {
+        temp = q.front();
+        q.pop();
+
+        if(temp->right) { // if temp->right is different of null
+            if(temp->right == v) { // if temp->right points to the same address as v
+                temp->right = nullptr; // Setting temp->right to point to null, and then delete the vertex passed
+                free(v);
+                return; // Finish function
+            } else {
+                q.push(temp->right);
+            }
+        }
+
+        if(temp->left) { // Same as above, but now with the left side
+            if(temp->left == v) {
+                temp->left = nullptr;
+                free(v);
+                return;
+            } else {
+                q.push(temp->left);
+            }
+        }
+    }
+}
+
+// Deleting a specific element
+void delete_node(BinaryTree *bt, int number) {
+
+    if(bt != nullptr && *bt != nullptr) { // if the tree does exist and it's not empty
+        // The idea is to find the deepest node and copy its value to the node that is going to be deleted and then, delete the deepest node
+        queue<Vertex *> q;
+        q.push(*bt);
+
+        Vertex *temp, *previous = nullptr;
+        Vertex *number_node = nullptr; // If the number does not exist in the tree, then it will null
+
+        // find where the key node is and also the deepest node
+
+        while(!q.empty()) {
+            temp = q.front();
+            q.pop();
+            if(temp->number == number)
+                number_node = temp;
+            if(temp->left != nullptr) {
+                previous = temp;
+                q.push(temp->left);
+            }
+            if(temp->right != nullptr) {
+                previous = temp;
+                q.push(temp->right);
+            }
+        }
+
+        if(number_node != nullptr) { // If the number was found
+            if(temp == number_node) { // If the number to be deleted is the deepest node
+                if(previous == nullptr) { // There's only one element
+                    *bt = nullptr; // Root is now pointing to null
+                    free(temp); // free temp.
+                } else {
+                    if(previous->right == temp) // checking if is the right side
+                        previous->right = nullptr; // Previous->right points to the deepest node
+                    if(previous->left == temp) // checking if is the left side
+                        previous->left = nullptr;
+                    free(temp); // Free temp node
+                }
+            } else {
+                int x = temp->number; // Copying the number of the deepest node
+                delete_deepest(bt,temp); // Delete deepest element
+                number_node->number = x; // Inserting the number of the deepest node in the node that is going to be deleted
+            }
+        }
+    }
 }

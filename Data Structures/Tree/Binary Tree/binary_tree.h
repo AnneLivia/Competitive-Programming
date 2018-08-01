@@ -1,6 +1,8 @@
 #ifndef BINARY_TREE_H
 #define BINARY_TREE_H
 #include <cstdlib>
+#include <iostream>
+#include <queue>
 
 /*
     What is a tree?
@@ -40,7 +42,7 @@
     Intern nodes (not leaves) always has 2 child
 
     Complete binary tree: it is strict binary and all of its leaves are on the same level
-    the number of nodes in a complete binary tree is 2^h-1, where h is height
+    the number of nodes in a complete binary tree is (2^h)-1, where h is height
 
     Almost complete binary tree: the height difference among the subtrees of any node is at least 1
     If the height of the tree is D, each leaf node is in the level D or D-1
@@ -81,6 +83,9 @@ void in_order(BinaryTree *bt);
 // post-order: visit the left child, right child and then, root.
 void post_order(BinaryTree *bt);
 
-// Insert elements based in a binary search tree
-
+// Inserting elements with the help of a queue
+int inserting(BinaryTree *bt, int number);
+// Deletion a element in a binary tree
+void delete_node(BinaryTree *bt, int number);
+void delete_deepest(BinaryTree *bt, Vertex* v);
 #endif // BINARY_TREE_H
