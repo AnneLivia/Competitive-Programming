@@ -1,10 +1,12 @@
 #include <iostream>
-
+#include "binary_tree.h"
 using namespace std;
 
 int main()
 {
 
-    cout << "Hello world!" << endl;
+    BinaryTree *bt = create_tree();
+
+    delete_tree(bt);
     return 0;
 }

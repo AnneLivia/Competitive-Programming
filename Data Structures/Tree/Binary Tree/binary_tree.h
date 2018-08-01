@@ -67,5 +67,20 @@ BinaryTree* create_tree(); // Creates the root of the tree, will points to the f
 void free_node(Vertex* v); // This function is used to delete the all the nodes
 void delete_tree(BinaryTree* bt); // Destroying the tree
 
+// Access informations
+int isEmpty(BinaryTree *bt);
+int nodeNumbers(BinaryTree *bt);
+int tree_height(BinaryTree *bt);
+
+// Iterate a binary tree, most important, pre, in and post order.
+
+// Pre-order: visit the root, left child and right child
+void pre_order(BinaryTree *bt);
+// In-order: visit the left child, root, right child
+void in_order(BinaryTree *bt);
+// post-order: visit the left child, right child and then, root.
+void post_order(BinaryTree *bt);
+
+// Insert elements based in a binary search tree
 
 #endif // BINARY_TREE_H
