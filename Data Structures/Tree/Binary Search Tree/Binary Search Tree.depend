@@ -1,9 +1,12 @@
 # depslib dependency file v1.0
-1533237991 source:c:\users\annel\downloads\programming\competitive programming\data structures\tree\binary search tree\main.cpp
+1533265127 source:c:\users\annel\downloads\programming\competitive programming\data structures\tree\binary search tree\main.cpp
 	<iostream>
 	"bst.h"
 
-1533239584 c:\users\annel\downloads\programming\competitive programming\data structures\tree\binary search tree\bst.h
+1533263439 c:\users\annel\downloads\programming\competitive programming\data structures\tree\binary search tree\bst.h
 	<iostream>
 	<cstdlib>
+
+1533264858 source:c:\users\annel\downloads\programming\competitive programming\data structures\tree\binary search tree\bst.cpp
+	"bst.h"
 

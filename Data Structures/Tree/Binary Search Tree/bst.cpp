@@ -61,7 +61,7 @@ int tree_height(BinaryTree *bt) {
 // Transversing tree: pre-order: root, left children, right children
 void pre_order(BinaryTree *bt) {
     if(bt != nullptr && *bt != nullptr) {
-        cout << (*bt)->number << endl;
+        cout << (*bt)->number << " ";
         pre_order(&((*bt)->left));
         pre_order(&((*bt)->right));
     }
@@ -71,7 +71,7 @@ void pre_order(BinaryTree *bt) {
 void in_order(BinaryTree *bt) {
     if(bt != nullptr && *bt != nullptr) {
         pre_order(&((*bt)->left));
-        cout << (*bt)->number << endl;
+        cout << (*bt)->number << " ";
         pre_order(&((*bt)->right));
     }
 }
@@ -81,7 +81,7 @@ void post_order(BinaryTree *bt) {
     if(bt != nullptr && *bt != nullptr) {
         pre_order(&((*bt)->left));
         pre_order(&((*bt)->right));
-        cout << (*bt)->number << endl;
+        cout << (*bt)->number << " ";
     }
 }
 
@@ -137,7 +137,67 @@ int insert_value(BinaryTree *bt, int number) {
     }
 }
 
+Node* remove_current(Node *current) {
+    Node *node1, *node2;
+
+    // Without child at the left
+    if(current->left == nullptr) {
+        node2 = current->right;
+        free(current);
+        return node2;
+    }
+
+    node1 = current;
+    node2 = current->left;
+
+    // Search for a child at the rightmost side of the subtree at the left
+    while(node2->right != nullptr) {
+        node1 = node2;
+        node2 = node2->right;
+    }
+
+    // Copy the rightmost child in the left subtree to the place of the removed node
+    if(node1 != current) {
+        node1->right = node2->left;
+        node2->left = current->left;
+    }
+
+    node2->right = current->right;
+
+    free(current);
+
+    return node2;
+}
+
 // Delete a value in 3 situations: leaf node, one child and two children
 int delete_value(BinaryTree *bt, int number) {
+    if(bt == nullptr)
+        return 0; // Error, binary tree doesn't exist
 
+    Node *current = *bt;
+    Node *previous = nullptr;
+
+    while(current != nullptr) {
+        if(number == current->number) {  // If the number was found, do the remotion of the value
+            if(current == *bt) // If the number is at the root
+                *bt = remove_current(current);
+            else {
+                if(previous->right == current) { // The node is at the right side
+                    previous->right = remove_current(current);
+                } else {
+                    previous->left = remove_current(current); // The node is at the left side
+                }
+
+                return 1; // Finished
+            }
+        }
+
+        // If the node wasn't found yet, keeping searching for value
+        previous = current; // Previous receives the current one, since bellow it's going to change
+        if(number > current->number) // If the number is greater than the number at the current node, then, it's supposed to be at the right
+            current = current->right;
+        else
+            current = current->left; // Left
+    }
 }
+

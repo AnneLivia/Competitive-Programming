@@ -58,5 +58,6 @@ void post_order(BinaryTree *bt);
 int insert_value(BinaryTree *bt, int number);
 
 // Delete a value in a binary search tree
-int delete_value(BinaryTree *bt, int number);
+int delete_value(BinaryTree *bt, int number); // Function responsible for search for the node to be removed
+Node* remove_current(Node *current); // function responsible for treat each one of the 3 cases of remotion
 #endif // BST_H
