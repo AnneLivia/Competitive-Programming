@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -13,6 +14,7 @@ int main()
         cin >> v[i++];
     }
 
+    sort(v.begin(),v.end());
     for (int i = 1; i < (int)v.size(); i++) {
         if(v[i] - v[i - 1] > 8)
             ok = 1;
