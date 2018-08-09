@@ -1,40 +1,55 @@
 #include <iostream>
+#include <vector>
 #include <algorithm>
-#include <map>
 
 using namespace std;
 
+struct C {
+    int n, f;
+    C() { this->f = 0; };
+    C(const int& num) : n(num) {
+    }
+    bool operator() (const C& c1) {
+        return (c1.n == this->n);
+    }
+};
+
+bool compare(const C& c1, const C& c2) {
+    if(c1.f < c2.f)
+        return true;
+    else if (c1.f == c2.f) {
+        if(c1.n > c2.n)
+            return true;
+    }
+    return false;
+}
+
 int main()
 {
-    long int t, n;
+    vector<C>v;
+    vector<C>::iterator it;
+    string s;
+    C aux;
+    int j = 0;
+    while(getline(cin,s)) {
+        if(j != 0)
+            cout << endl;
+        v.clear();
+        for(int i = 0; i < (int)s.size(); i++) {
+            it = find_if(v.begin(),v.end(),C((int)s[i]));
 
-    while(true) {
-        cin >> t;
-        if(t == 0)
-            break;
-        map<int, int>m;
-
-        while(t--) {
-            cin >> n;
-            if(m.find(n) != m.end()) {
-                m[n]+=1;
+            if(it != v.end()) {
+                it->f++;
             } else {
-                m.insert(make_pair(n,1));
+                aux.f = 1; aux.n = (int)s[i];
+                v.push_back(aux);
             }
         }
-
-        int tam = 0;
-        for(auto it = m.begin(); it != m.end(); it++) {
-
-            if(it->second % 2 != 0) {
-                if(tam != 0) {
-                    cout << " ";
-                }
-                cout << it->first;
-                tam++;
-            }
+        sort(v.begin(),v.end(),compare);
+        for(auto i : v) {
+            cout << i.n << " " << i.f << endl;
         }
-        cout << endl;
+        j++;
     }
     return 0;
 }
