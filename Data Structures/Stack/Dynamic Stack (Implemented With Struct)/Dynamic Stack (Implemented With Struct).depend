@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1534002902 source:c:\users\annel\desktop\dynamic stack (implemented with struct)\dynamic_stack.cpp
+	"dynamic_stack.h"
+
+1534002915 c:\users\annel\desktop\dynamic stack (implemented with struct)\dynamic_stack.h
+	<cstdlib>
+
+1534002931 source:c:\users\annel\desktop\dynamic stack (implemented with struct)\main.cpp
+	<iostream>
+	"dynamic_stack.h"
+

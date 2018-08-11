@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1534003067 source:c:\users\annel\desktop\static stack (implemented with struct)\main.cpp
+	<iostream>
+	"static_stack.h"
+
+1534003037 c:\users\annel\desktop\static stack (implemented with struct)\static_stack.h
+	<cstdlib>
+
+1534003049 source:c:\users\annel\desktop\static stack (implemented with struct)\static_stack.cpp
+	"static_stack.h"
+
