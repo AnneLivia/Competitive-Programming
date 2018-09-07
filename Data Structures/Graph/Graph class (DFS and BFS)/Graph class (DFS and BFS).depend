@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1536262250 source:c:\users\annel\desktop\graph class (dfs and bfs)\main.cpp
+	<iostream>
+	<list>
+	<stack>
+
