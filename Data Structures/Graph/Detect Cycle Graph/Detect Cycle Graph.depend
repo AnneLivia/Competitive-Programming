@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1536267122 source:c:\users\annel\desktop\detect cycle graph\main.cpp
+	<iostream>
+	<list>
+	<stack>
+
