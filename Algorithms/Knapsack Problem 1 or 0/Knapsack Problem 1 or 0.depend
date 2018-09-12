@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1536768244 source:c:\users\annel\desktop\knapsack problem 1 or 0\main.cpp
+	<iostream>
+	<vector>
+	<iomanip>
+
