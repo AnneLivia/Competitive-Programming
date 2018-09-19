@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1537374246 source:c:\users\annel\desktop\uri\dijkstra's algorithm\main.cpp
+	<iostream>
+	<list>
+	<queue>
+
