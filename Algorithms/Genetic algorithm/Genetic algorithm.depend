@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1539795012 source:c:\users\annel\desktop\genetic algorithm\main.cpp
+	<iostream>
+	<vector>
+	<ctime>
+	<cstdlib>
+	<chrono>
+	<thread>
+
