@@ -1,53 +1,32 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
 int main()
 {
-    int c, caso = 1, f, m, pi, snI;
-    string inf, sn;
-    char g;
-
-    vector<pair<int,char>>sap;
-    while(cin >> c) {
-        sap.clear();
-        cin.ignore();
-        f = m = pi = 0;
-        g = ' ';
-        sn = "";
-        getline(cin,inf);
-        inf += " ";
-        for(int i = 0; i < inf.length(); i++) {
-            if(inf[i] != ' ' && inf[i] != 'F' && inf[i] != 'M')
-                sn = sn + inf[i];
-            else if(inf[i] != ' ' && inf[i] == 'F' || inf[i] == 'M')
-                g = inf[i];
-
-            if(inf[i] == ' ' && g != ' ') {
-                snI = stoi(sn);
-                sap.push_back(make_pair(snI,g));
-                sn = "";
-                g = ' ';
+    int t, c1, c2, d1, d2;
+    while(cin >> t && t) {
+        cin >> d1 >> d2;
+        while(t--) {
+            cin >> c1 >> c2;
+            if(c1 == d1 || c2 == d2) {
+                cout << "divisa" << endl;
+            } else {
+                if(c2 > d2) {
+                    if(c1 < d1) {
+                        cout << "NO\n";
+                    } else {
+                        cout << "NE\n";
+                    }
+                } else {
+                    if(c1 < d1) {
+                        cout << "SO\n";
+                    } else {
+                        cout << "SE\n";
+                    }
+                }
             }
         }
-
-        for(auto i : sap) {
-            if(i.first == c) {
-                pi++;
-                if(i.second == 'F')
-                    f++;
-                else
-                    m++;
-            }
-        }
-        if(caso != 1)
-            cout << endl;
-        cout << "Caso " << caso << ":" << endl;
-        cout << "Pares Iguais: " << pi << endl;
-        cout << "F: " << f << endl;
-        cout << "M: " << m << endl;
-        caso++;
     }
     return 0;
 }
