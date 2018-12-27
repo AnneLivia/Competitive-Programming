@@ -1,70 +1,79 @@
 #include <iostream>
 #include <vector>
-#include <cstring>
+#include <stack>
+#include <algorithm>
 
 using namespace std;
 
-
 typedef vector<int> vi;
+typedef vector<vi> vii;
+vii v;
 
-char v[50][50];
-int vis[50][50] = {0}, n, m;
+bool dfs(int vertex) {
+    vi visited((int)v.size(), 0);
+    vi jaEsta((int)v.size(), 0);
 
-void dfs(int x, int j) {
-    vis[x][j] = 1;
-    // Up
-    if(x - 1 >= 0 && v[x - 1][j] == 'A') {
-        v[x - 1][j] = 'T';
-        dfs(x-1,j);
+    stack<int>p;
+
+    while(true) {
+        if(!visited[vertex]) {
+            p.push(vertex);
+            visited[vertex] = 1;
+            jaEsta[vertex] = 1;
+        }
+
+        int auxVertex = vertex, found_neighbour = false;
+        for (int i = 0; i < (int)v[vertex].size(); i++) {
+            if(jaEsta[v[vertex][i]]) {
+                return true; // loop
+            }
+
+            if(!visited[v[vertex][i]]) {
+                auxVertex = v[vertex][i];
+                found_neighbour = true;
+                break;
+            }
+        }
+
+        if(found_neighbour) {
+            vertex = auxVertex;
+        } else {
+            jaEsta[p.top()] = false;
+            p.pop();
+            if(!p.empty())
+                vertex = p.top();
+            else
+                break;
+        }
     }
-    // Down
-    if(x + 1 < n && v[x + 1][j] == 'A') {
-        v[x+1][j] = 'T';
-        dfs(x+1,j);
+
+    return false;
+}
+
+bool hasCicle() {
+    for (int i = 1; i < (int)v.size(); i++) {
+        if(dfs(i))
+            return true;
     }
-    // left
-    if(j - 1 >= 0 && v[x][j - 1] == 'A') {
-        v[x][j-1] = 'T';
-        dfs(x,j-1);
-    }
-    // right
-    if(j + 1 < m && v[x][j+1] == 'A') {
-        v[x][j+1] = 'T';
-        dfs(x,j+1);
-    }
+    return false;
 }
 
 int main()
 {
-    char c;
-
-    while(true) {
-        cin >> n >> m;
-        if(n == 0 && m == 0)
-            break;
-
-        for ( int i = 0; i < n; i++){
-            for ( int j = 0; j < m; j++) {
-                cin >> c;
-                v[i][j] = c;
-            }
+    int t, x, y, d;
+    cin >> t;
+    while(t--) {
+        cin >> x >> d;
+        v.assign(x + 1, vi());
+        while(d--) {
+            cin >> x >> y;
+            v[x].push_back(y);
         }
 
-        for ( int i = 0; i < n; i++){
-            for ( int j = 0; j < m; j++) {
-                if(!vis[i][j] && v[i][j] == 'T') {
-                    dfs(i,j);
-                }
-            }
-        }
-
-        for ( int i = 0; i < n; i++){
-            for ( int j = 0; j < m; j++) {
-                cout << v[i][j];
-            }
-            cout << endl;
-        }
-        cout << endl;
+        if(hasCicle())
+            cout << "SIM" << endl;
+        else
+            cout << "NAO" << endl;
     }
     return 0;
 }
