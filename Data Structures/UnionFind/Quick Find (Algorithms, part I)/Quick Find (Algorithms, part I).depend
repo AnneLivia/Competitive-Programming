@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1546815604 source:c:\users\annel\desktop\c++ reviewing\quick find (algorithms, part i)\main.cpp
+	<iostream>
+	<cstring>
+	<thread>
+	<chrono>
+
