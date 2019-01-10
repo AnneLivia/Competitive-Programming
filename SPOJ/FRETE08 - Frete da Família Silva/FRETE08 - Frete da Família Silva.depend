@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1546992841 source:c:\users\annel\desktop\competitive programming\spoj\frete08 - frete da família silva\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
