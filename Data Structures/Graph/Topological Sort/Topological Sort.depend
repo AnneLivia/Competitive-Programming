@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1547611432 source:c:\users\annel\desktop\topological sort\main.cpp
+	<iostream>
+	<list>
+	<stack>
+	<queue>
+	<cstring>
+
