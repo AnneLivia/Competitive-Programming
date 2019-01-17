@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1547616182 source:c:\users\annel\desktop\kahn's algorithm (topsort)\main.cpp
+	<iostream>
+	<queue>
+	<vector>
+
