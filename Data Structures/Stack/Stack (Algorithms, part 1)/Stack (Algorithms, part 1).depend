@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1547837313 source:c:\users\annel\desktop\stack (algorithms, part 1)\main.cpp
+	<iostream>
+	<exception>
+
