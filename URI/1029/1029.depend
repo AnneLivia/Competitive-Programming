@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1536592627 source:c:\users\annel\desktop\1029\main.cpp
-	<cstring>
-	<cmath>
-	<iostream>
-	<cstdio>
-

@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1545514751 source:c:\users\annel\desktop\christmas contest 2018 (f) suspicious gifts\main.cpp
-	<iostream>
-	<map>
-	<vector>
-	<algorithm>
-	<sstream>
-
