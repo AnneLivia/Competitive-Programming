@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1544813259 source:c:\users\annel\downloads\programming\programming languages\c++\reviewing c++\1022\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	<cmath>
+	<cstring>
+

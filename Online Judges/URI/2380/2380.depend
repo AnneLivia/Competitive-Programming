@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1546636249 source:c:\users\annel\desktop\competitive programming\uri\2380\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
