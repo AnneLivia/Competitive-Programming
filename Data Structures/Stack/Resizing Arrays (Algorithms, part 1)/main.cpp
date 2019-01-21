@@ -83,7 +83,7 @@ public:
 ostream& operator << (ostream& stream, ResizingArray& ra) {
     for (int i = 0; i < ra.capacity; i++) {
         if (i != 0)
-            cout << " ";
+            stream << " ";
         stream << ra[i];
     }
     return stream;
