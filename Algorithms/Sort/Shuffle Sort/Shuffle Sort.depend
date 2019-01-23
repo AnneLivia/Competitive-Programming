@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1548202058 source:c:\users\annel\desktop\shuffle sort\main.cpp
+	<iostream>
+	<vector>
+	<cstdlib>
+	<ctime>
+
