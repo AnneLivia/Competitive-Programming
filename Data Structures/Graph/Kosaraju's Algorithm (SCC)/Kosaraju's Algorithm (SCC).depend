@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1548290658 source:c:\users\annel\desktop\kosaraju's algorithm (scc)\main.cpp
+	<iostream>
+	<list>
+	<vector>
+	<array>
+	<stack>
+
