@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1548352253 source:c:\users\annel\desktop\kosaraju algorithm using bfs\main.cpp
+	<iostream>
+	<list>
+	<vector>
+	<queue>
+	<stack>
+
