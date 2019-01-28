@@ -40,7 +40,28 @@ using namespace std;
     A    0  1  2  2  3  3  4  4
 */
 
-string llc(string s1, string s2) {
+// There are two cases, when the end of words matches and when it doesn't match,
+// so it takes the maximum between the string 1 or string 2 by decreasing its size.
+// Example: STR1: ABCD, STR2: AB.
+// First call:
+
+int result = 0;
+// Recursive solution for LCS
+int lcsRecursive(string s1, string s2, int indexS1, int indexS2) {
+    if(indexS1 == 0 || indexS2 == 0) // base case
+        return 0; // strings are empty, any char matches
+    else {
+        // If the end of the strings are equal, then return 1 + the sum of what is left
+        if(s1[indexS1] == s2[indexS2]) {
+            return 1 + lcsRecursive(s1, s2, indexS1 - 1, indexS2 - 1);
+        } else {
+            // if they are not equal, then, return maximum both from the string 1 or string 2
+            return max(lcsRecursive(s1, s2, indexS1 - 1, indexS2), lcsRecursive(s1, s2, indexS1, indexS2 - 1));
+        }
+    }
+}
+
+string lcs(string s1, string s2) {
     int xSize = (int)s1.size(); // Getting size of string 1
     int ySize = (int)s2.size(); // Getting size of string 2
 
@@ -84,6 +105,7 @@ string llc(string s1, string s2) {
 
 int main()
 {
-    llc("ABCB", "BDCAB");
+    cout << lcsRecursive("ABCB", "BDCAB", 4, 5) << endl;
+    lcs("ABCB", "BDCAB");
     return 0;
 }
