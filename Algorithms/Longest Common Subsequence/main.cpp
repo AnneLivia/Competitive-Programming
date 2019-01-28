@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -61,6 +62,24 @@ int lcsRecursive(string s1, string s2, int indexS1, int indexS2) {
     }
 }
 
+// LCS Top down Dynamic Programming
+vector<vector<int> > table;
+int lcsRecursiveDP(string s1, string s2, int indexS1, int indexS2) {
+    if(table[indexS1][indexS2])
+        return table[indexS1][indexS2];
+    else {
+        if(indexS1 == 0 || indexS2 == 0)
+            table[indexS1][indexS2] = 0;
+        else {
+            if(s1[indexS1] == s2[indexS2])
+                table[indexS1][indexS2] = 1 + lcsRecursiveDP(s1,s2, indexS1 - 1, indexS2 - 1);
+            else
+                table[indexS1][indexS2] = max(lcsRecursiveDP(s1,s2,indexS1 - 1,indexS2), lcsRecursiveDP(s1,s2,indexS1, indexS2 - 1));
+        }
+        return table[indexS1][indexS2];
+    }
+}
+
 string lcs(string s1, string s2) {
     int xSize = (int)s1.size(); // Getting size of string 1
     int ySize = (int)s2.size(); // Getting size of string 2
@@ -98,14 +117,33 @@ string lcs(string s1, string s2) {
         cout << endl;
     }
 
-    // Finding what is the sequence
+    /* Finding what is the sequence
+        Steps:
+        Traverse the 2D array starting from L[m][n]. Do following for every cell L[i][j]
+            a) If characters (in X and Y) corresponding to L[i][j] are same (Or X[i-1] == Y[j-1]), then include this character as part of LCS.
+            b) Else compare values of L[i-1][j] and L[i][j-1] and go in direction of greater value.
 
-    return " ";
+    */
+    string stresult = "";
+    int i = xSize, j = ySize;
+    while(j > 0 && i > 0) {
+        if(s1[i - 1] == s2[j - 1]) {
+            stresult+=s1[i - 1];
+            i--; j--;
+        } else if (table[i - 1][j] > table[i][j - 1])
+            i--;
+        else
+            j--;
+    }
+
+    return stresult;
 }
 
 int main()
 {
     cout << lcsRecursive("ABCB", "BDCAB", 4, 5) << endl;
-    lcs("ABCB", "BDCAB");
+    table.assign(4, vector<int>(5,0));
+    cout << lcsRecursiveDP("ABCB", "BDCAB", 4, 5) << endl;
+    cout << lcs("AGGTAB", "GXTXAYB") << endl;
     return 0;
 }
