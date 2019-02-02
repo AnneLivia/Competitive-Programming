@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1549046866 source:c:\users\annel\desktop\shortest path (bfs)\main.cpp
+	<iostream>
+	<list>
+	<queue>
+	<vector>
+
