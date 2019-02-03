@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1549157865 source:c:\users\annel\desktop\dijkstra's algorithm (set)\main.cpp
+	<iostream>
+	<list>
+	<set>
+	<vector>
+	<limits>
+	<stack>
+
