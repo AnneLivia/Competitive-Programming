@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1549236499 source:c:\users\annel\desktop\engarraf - engarrafamento\main.cpp
+	<iostream>
+	<queue>
+	<algorithm>
+	<vector>
+
