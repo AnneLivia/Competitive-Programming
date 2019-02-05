@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1549301622 source:c:\users\annel\desktop\elevtrbl - elevator trouble\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+
