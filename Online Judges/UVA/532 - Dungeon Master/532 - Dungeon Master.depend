@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1549394476 source:c:\users\annel\desktop\532 - dungeon master\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+
