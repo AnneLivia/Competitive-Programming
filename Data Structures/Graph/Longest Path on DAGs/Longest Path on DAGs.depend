@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1549489551 source:c:\users\annel\desktop\longest path on dags\main.cpp
+	<iostream>
+	<list>
+	<vector>
+	<queue>
+	<stack>
+
