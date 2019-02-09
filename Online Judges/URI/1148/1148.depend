@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1549679931 source:c:\users\annel\desktop\1148\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+	<algorithm>
+
