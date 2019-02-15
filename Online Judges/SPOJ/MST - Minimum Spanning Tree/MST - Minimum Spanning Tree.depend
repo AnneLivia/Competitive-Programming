@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1549745768 source:c:\users\annel\desktop\mst - minimum spanning tree\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+
