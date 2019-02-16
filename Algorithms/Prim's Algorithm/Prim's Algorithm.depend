@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1550340395 source:c:\users\annel\desktop\prim's algorithm\main.cpp
+	<iostream>
+	<list>
+	<vector>
+	<queue>
+
