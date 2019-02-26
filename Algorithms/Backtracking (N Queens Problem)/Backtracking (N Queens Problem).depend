@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1551058306 source:c:\users\annel\desktop\backtracking (n queens problem)\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<thread>
+	<cstdlib>
+	<chrono>
+
