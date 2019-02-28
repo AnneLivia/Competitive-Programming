@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1551133846 source:c:\users\annel\desktop\backtracking (sudoku)\main.cpp
+	<iostream>
+	<cstring>
+	<chrono>
+	<thread>
+	<cstdlib>
+	<windows.h>
+	<dos.h>
+	<dir.h>
+
