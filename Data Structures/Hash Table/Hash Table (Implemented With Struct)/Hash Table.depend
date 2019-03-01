@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1551468771 source:c:\users\annel\desktop\hash table\main.cpp
+	<iostream>
+	<vector>
+	"hashtable.h"
+
+1551468792 source:c:\users\annel\desktop\hash table\hashtable.cpp
+	"hashTable.h"
+
+1551468265 c:\users\annel\desktop\hash table\hashtable.h
+	<iostream>
+	<cstdlib>
+
