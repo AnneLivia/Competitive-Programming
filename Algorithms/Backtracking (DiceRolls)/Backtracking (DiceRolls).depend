@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1551032035 source:c:\users\annel\desktop\backtracking (dicerolls)\main.cpp
+	<iostream>
+	<vector>
+
