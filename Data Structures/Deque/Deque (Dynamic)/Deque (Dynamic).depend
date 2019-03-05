@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1551757558 source:c:\users\annel\desktop\deque (dynamic)\main.cpp
+	<iostream>
+	<cstdlib>
+
