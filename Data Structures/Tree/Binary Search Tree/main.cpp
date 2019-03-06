@@ -47,6 +47,9 @@ int main()
             cout << n << " was not found!\n";
         }
         post_order(bt);
+        cout << "\nSearch an element: ";
+        cin >> n;
+        cout << n << " is at tree: " << searchElement(bt, n) << endl;
         cout << endl;
     }
     delete_tree(bt);

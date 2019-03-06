@@ -70,17 +70,17 @@ void pre_order(BinaryTree *bt) {
 // Transversing tree: in-order: left, root, right
 void in_order(BinaryTree *bt) {
     if(bt != nullptr && *bt != nullptr) {
-        pre_order(&((*bt)->left));
+        in_order(&((*bt)->left));
         cout << (*bt)->number << " ";
-        pre_order(&((*bt)->right));
+        in_order(&((*bt)->right));
     }
 }
 
 // Transversing tree: post-order: left, right, root
 void post_order(BinaryTree *bt) {
     if(bt != nullptr && *bt != nullptr) {
-        pre_order(&((*bt)->left));
-        pre_order(&((*bt)->right));
+        post_order(&((*bt)->left));
+        post_order(&((*bt)->right));
         cout << (*bt)->number << " ";
     }
 }
@@ -132,64 +132,133 @@ int insert_value(BinaryTree *bt, int number) {
             previous->right = no;
         else
             previous->left = no;
-
-        return 1; // Everything went okay
     }
+    return 1; // Everything went okay
 }
 
+// That function is responsible to treat all possible configurations of deletion
+// when the node has no child, only one child and two children
 Node* remove_current(Node *current) {
-    Node *node1, *node2;
+    Node *nodeLeft, *nodeRight;
 
-    // Without child at the left
-    if(current->left == nullptr) {
-        node2 = current->right;
+    // without any child
+    if(current->left == nullptr && current->right == nullptr) {
+        // deallocating memory
         free(current);
-        return node2;
+        // avoid dangling pointer
+        current = nullptr;
+        // return null to the previous node that was pointing to the removed node
+        return nullptr;
     }
 
-    node1 = current;
-    node2 = current->left;
+    // Without a child at the left but with one at the right
+    if(current->left == nullptr) {
+        // making the previous node pointing to whatever child the current node was pointing to
+        // since it has only one child, and in this case at the right.
+        nodeRight = current->right;
+        // deallocating memory
+        free(current);
+        // avoid dangling pointer
+        current = nullptr;
+        // return the right child to the previous one
+        return nodeRight;
+    }
+
+    // in case there's only one child, but now at the left
+    if(current->right == nullptr) {
+        // making the previous node pointing to whatever child the current node was pointing to
+        // since it has only one child, and in this case at the left.
+        nodeLeft = current->left;
+        // deallocating memory
+        free(current);
+        // avoid dangling pointer
+        current = nullptr;
+        // return the left child to the previous one
+        return nodeLeft;
+    }
+
+    // If it has gotten here, it means that the node to be deleted has two children
+    // so now it's time to search for a child at the rightmost side of the left subtree
+    // to overwrite the node to be deleted. that guarantees that the node taken from the
+    // rightmost side is lesser then the right child of the current node and this node is greater than the
+    // left child of the current node.
+
+    Node* previous = current;
+    // left subtree
+    nodeRight = current->left;
 
     // Search for a child at the rightmost side of the subtree at the left
-    while(node2->right != nullptr) {
-        node1 = node2;
-        node2 = node2->right;
+    // while the nodeLeft is different of null, we haven't got to the rightmost child yet
+    while(nodeRight->right != nullptr) {
+        previous = nodeRight;
+        // moving to the right child
+        nodeRight = nodeRight->right;
+    }
+    // when node nodeRight->right is null, it means the rightMost child was found
+    // So now we can use the previous node that points to the right most child to point
+    // to whatever the right most child was pointing to, in case it has a left child
+    // and make the rightNode pointing to as its left child to the left child of the current node.
+    // Replace the removed node with the rightmost child in the left subtree
+    if(previous != current) {
+        // if it get here, it means that it was found a rightmost node, otherwise, the
+        // left child of current hasn't any right most child, which means that it must
+        // be swapped with the current node. (that's going to be the node that is going to pointing
+        // to whatever current was pointing to. i.e. it will be pointing to the right child of the removed node.
+
+        // in case the rightmost child has a left child
+        previous->right = nodeRight->left;
+        // making the rightmost child point to the left child of current
+        nodeRight->left = current->left;
     }
 
-    // Copy the rightmost child in the left subtree to the place of the removed node
-    if(node1 != current) {
-        node1->right = node2->left;
-        node2->left = current->left;
-    }
-
-    node2->right = current->right;
+    // node right points to the right child of current one
+    nodeRight->right = current->right;
 
     free(current);
-
-    return node2;
+    // avoiding dangling pointer
+    current = nullptr;
+    // returning rightmost child for the previous node from the removed one point to it
+    return nodeRight;
 }
 
+/*
+    When the node has no child, we can simply make its parent node (previous) point to null
+    When the node has only one child (either left or right), make the previous node to it point to the child it was pointing
+    When the node has two children, to guarantee that after the deletion of a node, the binary search tree keep following the rules of a BST
+    we need to take the a child from the left subtree that is a most-right node and replace where the node is going to be deleted.
+    so that it's guarantee that this node is greater than the left child and smaller than the right child.
+*/
 // Delete a value in 3 situations: leaf node, one child and two children
 int delete_value(BinaryTree *bt, int number) {
     if(bt == nullptr)
         return 0; // Error, binary tree doesn't exist
 
+    // Pointers to keep track of the previous one to the node
     Node *current = *bt;
     Node *previous = nullptr;
 
     while(current != nullptr) {
-        if(number == current->number) {  // If the number was found, do the remotion of the value
-            if(current == *bt) // If the number is at the root
+        // If the number was found, do the remotion of the value
+        if(number == current->number) {
+            // If the number is the root (check if root has one, two or none child)
+            if(current == *bt) {
                 *bt = remove_current(current);
-            else {
-                if(previous->right == current) { // The node is at the right side
+            } else {
+                // otherwise, if it's not the root, then
+                // checking if the element is at the right or left
+                // The node is at the right side
+                if(previous->right == current) {
+                    // so the right node that previous was pointing to must be updated to either null, the only child the
+                    // node to be deleted was pointing to, or the right-most child from the left subtree
                     previous->right = remove_current(current);
                 } else {
-                    previous->left = remove_current(current); // The node is at the left side
+                    // If it's not the right, do the same for the left
+                    // The node is at the left side
+                    previous->left = remove_current(current);
                 }
-
-                return 1; // Finished
             }
+            // return 1, to specify that the element was removed
+            return 1;
         }
 
         // If the node wasn't found yet, keeping searching for value
@@ -197,7 +266,37 @@ int delete_value(BinaryTree *bt, int number) {
         if(number > current->number) // If the number is greater than the number at the current node, then, it's supposed to be at the right
             current = current->right;
         else
-            current = current->left; // Left
+            current = current->left; // Otherwise, it's at the left subtree
     }
+
+    return 0;
+}
+
+bool searchElementUtil(Node *node, int v) {
+    // if node is equal to null it means that the value wasn't found
+    if(node == nullptr)
+        return false;
+    // otherwise, check if number is equal to the current node
+    if(node->number == v) {
+        // return true in this case
+        return true;
+    } else {
+        // otherwise, check if the number might be in the right side or left
+        if(v < node->number) {
+            // might be at the left since its smaller than the number at the current node
+            return searchElementUtil(node->left, v);
+        } else {
+            // otherwise, it might be at the right
+            return searchElementUtil(node->right, v);
+        }
+    }
+}
+
+bool searchElement(BinaryTree* bt, int v) {
+    // if binary doesn't exists or is empty
+    if(bt == nullptr || *bt == nullptr)
+        return false;
+    // otherwise search for an element, it can be either recursive or not
+   return searchElementUtil(*bt, v);
 }
 

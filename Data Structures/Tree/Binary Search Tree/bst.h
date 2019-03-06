@@ -60,4 +60,9 @@ int insert_value(BinaryTree *bt, int number);
 // Delete a value in a binary search tree
 int delete_value(BinaryTree *bt, int number); // Function responsible for search for the node to be removed
 Node* remove_current(Node *current); // function responsible for treat each one of the 3 cases of remotion
+
+// access elements
+bool searchElement(BinaryTree* bt, int v);
+bool searchElementUtil(Node *node, int v);
+
 #endif // BST_H
