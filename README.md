@@ -27,6 +27,7 @@
       - [Array Combinations](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Backtracking%20(Array%20Combinations)/main.cpp)
       - [Array Permutations](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Backtracking%20(Array%20Permutation)/main.cpp)
       - [DiceRolls](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Backtracking%20(DiceRolls)/main.cpp)
+      - [String Permutations](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Backtracking%20(Permute%20String)/main.cpp)
       - [N Queens Problem](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Backtracking%20(N%20Queens%20Problem)/main.cpp)
       - [PrintBinary](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Backtracking%20(PrintBinary)/main.cpp)
       - [Sudoku](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Backtracking%20(Sudoku)/main.cpp)
