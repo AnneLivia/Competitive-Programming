@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1549740836 source:c:\users\annel\desktop\buglife - a bug’s life\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+	<stack>
+
