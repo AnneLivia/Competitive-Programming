@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1549745163 source:c:\users\annel\desktop\ezdijkst - easy dijkstra problem\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+
