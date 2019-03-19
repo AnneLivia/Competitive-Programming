@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1549341461 source:c:\users\annel\desktop\pt07y - is it a tree\main.cpp
+	<iostream>
+	<vector>
+	<stack>
+
