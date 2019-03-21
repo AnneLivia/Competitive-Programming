@@ -48,6 +48,7 @@
       - [Subset Sum Problem](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Subset%20Sum/main.cpp)
       - [Longest Common Substring](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Longest%20Common%20Substring/main.cpp)
       - [Longest Common Subsequence](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Longest%20Common%20Subsequence/main.cpp)
+      - [Longest Palindromic Subsequence](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Longest%20Palindromic%20Subsequence%20(LPS)/main.cpp)
   4. **Greedy Algorithms**:
       - [Coin Change Problem](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Coin%20Change%20Problem/main.cpp)
   5. **String Algorithms**:
