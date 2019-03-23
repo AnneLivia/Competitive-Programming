@@ -54,6 +54,7 @@
   5. **String Algorithms**:
       - [String Matching (Naive Solution)](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/String%20Matching%20(Naive%20Solution)/main.cpp)
       - [LPS (Longest Prefix Which Is Also A Suffix)](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/LPS%20(Longest%20Prefix%20which%20is%20also%20Suffix)/main.cpp)
+      - [Knuth-Morris-Pratt Algorithm (KMP)](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Knuth-Morris-Pratt%20Algorithm/main.cpp)
   6. **Sort Algorithms**: [Implementations](https://github.com/AnneLivia/Competitive-Programming/tree/master/Algorithms/Sort)
       - [Bubble Sort](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Sort/Bubble%20Sort/main.cpp)
       - [Bubble Sort (Recursive)](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Sort/Bubble%20Sort%20Recursive/main.cpp)
