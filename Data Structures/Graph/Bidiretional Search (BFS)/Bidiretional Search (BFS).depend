@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1553190362 source:c:\users\annel\desktop\bidiretional search (bfs)\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<queue>
+
