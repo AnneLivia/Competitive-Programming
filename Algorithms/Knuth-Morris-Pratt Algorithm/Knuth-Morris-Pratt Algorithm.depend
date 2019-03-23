@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1553209648 source:c:\users\annel\desktop\knuth-morris-pratt algorithm\main.cpp
+	<vector>
+	<iostream>
+
