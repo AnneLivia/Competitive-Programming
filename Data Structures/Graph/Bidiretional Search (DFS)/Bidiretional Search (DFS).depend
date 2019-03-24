@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1553189792 source:c:\users\annel\desktop\bidiretional search (dfs)\main.cpp
+	<iostream>
+	<vector>
+	<stack>
+	<deque>
+
