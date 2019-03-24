@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1553454142 source:c:\users\annel\desktop\bidirectional dijkstra\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+	<algorithm>
+	<cstdlib>
+
