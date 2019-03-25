@@ -40,6 +40,7 @@
       - [Kruskal's Algorithm](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Kruskal%20Algorithm/main.cpp)
       - [Prim's Algorithm (Adjacent Matrix)](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Prim's%20Algorithm%20(Adjacent%20Matrix)/main.cpp)
       - [Prim's Algorithm (Adjacent List)](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Prim's%20Algorithm/main.cpp)
+      - [A* (Star) Algorithm](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/A%20Star%20Algorithm/main.cpp)
   3. **Dynamic Programming**:
       - [Coin Change Problem](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Coin%20Change%20(DP)/main.cpp)
       - [Kadane Algorithm](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Kadane%20Algorithm/main.cpp)
