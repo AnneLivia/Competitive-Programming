@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1553549938 source:c:\users\annel\desktop\a star algorithm\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+	<cstdlib>
+	<cstring>
+	<cmath>
+	<ctime>
+	<cfloat>
+	<chrono>
+	<limits>
+	<algorithm>
+	<thread>
+	<iomanip>
+
