@@ -14,3 +14,18 @@
 	<thread>
 	<iomanip>
 
+1553566243 source:c:\users\annel\downloads\programming\competitive programming\algorithms\a star algorithm\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+	<cstdlib>
+	<cstring>
+	<cmath>
+	<ctime>
+	<cfloat>
+	<chrono>
+	<limits>
+	<algorithm>
+	<thread>
+	<iomanip>
+

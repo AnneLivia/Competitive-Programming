@@ -114,7 +114,7 @@ public:
 		grid.assign(this->nCells, vector<int>(this->nCells, 0));
 
 		// get number of obstacles randomly
-		int nObstacles = 1 + rand() % nCells;
+		int nObstacles = 1 + rand() % nCells * 2;
 		this->initializeGridRandomly(nObstacles);
 	}
 
@@ -173,10 +173,10 @@ public:
 
 	// show path taken from source to goal
 	void showPath(Cell& source, Cell& goal, vector<Cell>& path) {
-	    cout << setw(45) << " A* SEARCH ALGORITHM\n";
-	    cout << " >> S is the source\n >> G is the Goal\n >> \'.\' is a free location\n >> \'#\' is a obstacle\n >> \'=\' is the current checked path\n\n";
+	    cout << setw(35) << " A* SEARCH ALGORITHM\n";
+	    cout << " >> S is the source\n >> G is the Goal\n >> \'.\' is a free location\n >> \'#\' is a obstacle\n >> \'=\' path\n\n";
 		for (int i = 0; i < this->nCells; i++) {
-            cout << setw(20);
+            cout << setw(10);
 			for (int j = 0; j < this->nCells; j++) {
 			    if(i == source.x && j == source.y) {
                     cout << " S ";
@@ -196,21 +196,21 @@ public:
 
     // version two, without final path
 	void showPath(vector<vector<bool> >& visitedCells, Cell& source, Cell& goal) {
-	    cout << setw(45) << " A* SEARCH ALGORITHM\n";
-	    cout << " >> S is the source\n >> G is the Goal\n >> \'.\' is a free location\n >> \'#\' is a obstacle\n >> \'=\' is the current checked path\n\n";
+	    cout << setw(35) << " A* SEARCH ALGORITHM\n";
+	    cout << " >> S is the source\n >> G is the Goal\n >> \'.\' is a free location\n >> \'#\' is a obstacle\n >> \'=\' path\n\n";
 		for (int i = 0; i < this->nCells; i++) {
-            cout << setw(15);
+            cout << setw(10);
 			for (int j = 0; j < this->nCells; j++) {
 			    if(i == source.x && j == source.y) {
-                    cout << "  S  ";
+                    cout << " S ";
 			    } else if (i == goal.x && j == goal.y) {
-                    cout << "  G  ";
+                    cout << " G ";
 			    } else if (visitedCells[i][j]) {
-					cout << "  =  ";
+					cout << " = ";
 				} else if (this->grid[i][j]) {
-					cout << "  #  ";
+					cout << " # ";
 				} else {
-                    cout << "  .  ";
+                    cout << " . ";
 				}
 			}
 			cout << endl;
@@ -223,9 +223,13 @@ public:
         int j = goal.y;
         while(!(dist[i][j].parentx == i && dist[i][j].parenty == j)) {
             path.push_back({i,j});
-            i = dist[i][j].parentx;
-            j = dist[i][j].parenty;
+            // cannot update directly because of the i and j variable, if it change, it will be get a wrong position
+            int tempX = dist[i][j].parentx;
+            int tempY = dist[i][j].parenty;
+            i = tempX;
+            j = tempY;
         }
+
         this->showPath(source, goal, path);
 	}
 
@@ -254,12 +258,12 @@ public:
 			Cell coordinates = { priority.top().second.first, priority.top().second.second };
 			// remove it from priority
 			priority.pop();
-			// mark the current coordinate as already proceeded
+			// mark the current coordinate as proceeded
 			visitedCells[coordinates.x][coordinates.y] = true;
 
             // ---------------------------------------------------
 			this->showPath(visitedCells, source, goal);
-            this_thread::sleep_for(chrono::milliseconds(100));
+            this_thread::sleep_for(chrono::milliseconds(300));
             system("cls");
             // ---------------------------------------------------
 
@@ -273,7 +277,7 @@ public:
 			// if it's not the goal, check all of the possible movements, in this case it's going to be considered only
 			// up, down, left and right movements, so it's going to be used the Manhattan Heuristic
 			// up = {i - 1, j}, down = {i + 1, j}, left = {i, j - 1}, right = {i, j + 1}
-			int row[4] = { 1, 0, -1, 0 }, col[4] = { 0, 1, 0, -1 };
+			int row[4] = { 1, -1, 0, 0 }, col[4] = { 0, 0, 1, -1 };
 			// running through each one of the four movements to calculate its heuristics and insert it on the priority queue
 			for (int i = 0; i < 4; i++) {
 				// calculate movement for both x and y coordinates
@@ -311,7 +315,7 @@ public:
 		}
 
         this->showPath(visitedCells, source, goal);
-        cout << setw(48) << "it's not possible reach the goal\n";
+        cout << setw(40) << "\nit's not possible reach the goal\n";
 		// if it gets here, it wasn't possible to get in the goal coordinates
 		return false;
 	}
@@ -320,7 +324,12 @@ public:
 int main()
 {
 	srand(time(NULL));
-	Grid g(10);
-	g.AStarAlgorithm({ 0,0 }, { 9,9 });
+	int ok = 1;
+	do {
+        Grid g(10);
+        g.AStarAlgorithm({ 0,0 }, { 9,9 });
+        cin >> ok;
+        system("cls");
+	} while(ok);
 	return 0;
 }
