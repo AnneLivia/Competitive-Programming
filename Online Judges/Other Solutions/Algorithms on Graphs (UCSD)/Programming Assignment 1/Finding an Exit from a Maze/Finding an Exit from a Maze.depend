@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1547187684 source:c:\users\annel\desktop\c++ reviewing\ finding an exit from a maze\main.cpp
+	<iostream>
+	<vector>
+
