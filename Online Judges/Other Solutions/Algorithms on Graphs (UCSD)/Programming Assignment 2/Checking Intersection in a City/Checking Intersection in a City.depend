@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1548310843 source:c:\users\annel\desktop\competitive programming\other solutions\algorithms on graphs (ucsd)\programming assignment 2\checking intersection in a city\main.cpp
+	<iostream>
+	<vector>
+	<list>
+	<stack>
+
