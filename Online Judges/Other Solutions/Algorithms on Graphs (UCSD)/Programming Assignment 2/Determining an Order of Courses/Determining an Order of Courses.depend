@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1548309357 source:c:\users\annel\desktop\competitive programming\other solutions\algorithms on graphs (ucsd)\programming assignment 2\determining an order of courses\main.cpp
+	<iostream>
+	<list>
+	<queue>
+	<stack>
+	<vector>
+
