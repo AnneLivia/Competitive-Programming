@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1548980393 source:c:\users\annel\desktop\checking whether a graph is bipartite\main.cpp
+	<iostream>
+	<queue>
+	<vector>
+
