@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1548978087 source:c:\users\annel\desktop\computing the minimum number of flight segments\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+
