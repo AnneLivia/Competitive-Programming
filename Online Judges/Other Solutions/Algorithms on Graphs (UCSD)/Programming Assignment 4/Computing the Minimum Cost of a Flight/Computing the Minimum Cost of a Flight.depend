@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1550120192 source:c:\users\annel\desktop\computing the minimum cost of a flight\main.cpp
+	<iostream>
+	<queue>
+	<vector>
+
