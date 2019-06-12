@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1550121044 source:c:\users\annel\desktop\detecting anomalies in currency exchange rates\main.cpp
+	<iostream>
+	<vector>
+
