@@ -58,7 +58,7 @@ VALUES
   (6,	'Single bed',	750,	460,	1,	2);
 
 -- Select answer  
-SELECT products.name, providers.name FROM Products, providers WHERE products.id_providers = 6 and providers.id = products.id_categories;
+SELECT products.name, providers.name FROM Products, providers WHERE products.id_categories = 6 and providers.id = products.id_providers;
 
 /*  Execute this query to drop the tables */
 DROP TABLE products, providers, categories; 
