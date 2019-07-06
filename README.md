@@ -8,7 +8,8 @@
   4. **PKU JudgeOnline (POJ)**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/POJ).
   5. **Sphere Online Judge (SPOJ)**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/SPOJ).
   6. **URI Online Judge (URI)**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/URI).
-  7. **UVA Online Judge (UVA)**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/UVA).
+  7. **URI Online Judge (URI)**: [SQL Solutions](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/URI%20SQL%20Submissions).
+  8. **UVA Online Judge (UVA)**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/UVA).
 
 ### ➜ DATA STRUCTURES
   1. **Deque**: [Implementations](https://github.com/AnneLivia/Competitive-Programming/tree/master/Data%20Structures/Deque).
