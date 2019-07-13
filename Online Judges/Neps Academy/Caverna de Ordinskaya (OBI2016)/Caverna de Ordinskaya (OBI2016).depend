@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1562981514 source:c:\users\annel\desktop\caverna de ordinskaya (obi2016)\main.cpp
+	<iostream>
+	<climits>
+	<vector>
+
