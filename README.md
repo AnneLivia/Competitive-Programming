@@ -5,7 +5,7 @@
   1. **Code Jam - Google's Coding Competitions**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/Code%20Jam).
   2. **CodeChef**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/CodeChef).
   3. **CodeForces**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/CodeForces).
-  4. **Neps Academy**: [Solved Problems](https://github.com/AnneLivia/Competitive- Programming/tree/master/Online%20Judges/Neps%20Academy).
+  4. **Neps Academy**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/Neps%20Academy).
   5. **PKU JudgeOnline (POJ)**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/POJ).
   6. **Sphere Online Judge (SPOJ)**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/SPOJ).
   7. **URI Online Judge (URI)**: [Solved Problems](https://github.com/AnneLivia/Competitive-Programming/tree/master/Online%20Judges/URI).
