@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1562707634 source:c:\users\annel\desktop\bolsas\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
