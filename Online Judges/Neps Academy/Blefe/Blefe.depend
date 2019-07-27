@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1562524853 source:c:\users\annel\desktop\blefe\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
