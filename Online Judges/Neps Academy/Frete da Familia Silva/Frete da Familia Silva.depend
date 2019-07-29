@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1562542637 source:c:\users\annel\desktop\frete da familia silva\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
