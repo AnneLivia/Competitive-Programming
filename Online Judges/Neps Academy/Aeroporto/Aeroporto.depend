@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1564945638 source:c:\users\annel\desktop\aeroporto\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<queue>
+
