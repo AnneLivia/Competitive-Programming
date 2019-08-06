@@ -23,33 +23,43 @@ using namespace std;
 */
 
 vector<int>bit;
+vector<int>v = {2, 1, 1, 3, 2, 3, 4, 5, 6, 7, 8, 9};
+
 
 void update(int index, int value) {
     while(index < (int)bit.size()) {
-        bit[index]+=value;
-        // opposite to the sum, here we sum up with the LSB
+        bit[index]+=value; // updating the sum
+        // opposite to the sum, here we sum up with the LSB of the index
         index += index & (-index);
     }
 }
 
 // get the sum between some range in O(log n)
 int get(int a) {
-    // to get the sum, is just needed to get the least significant bit of a value
+    // to get the sum, it's just needed to get the least significant bit of a value
     int sum = 0;
     while(a > 0) {
-        sum+=bit[a]; // storing the sum
+        sum+=bit[a]; // storing the sum store in position a of the tree
         a-=a&(-a); // removing the least significant bit
     }
     return sum;
 }
 
-int main()
-{
-    vector<int>v = {2, 1, 1, 3, 2, 3, 4, 5, 6, 7, 8, 9};
+// function to build the BIT
+void build() {
+    // creating array of v + 1 positions, so that we can count from 1 to v
     bit.assign((int)v.size() + 1, 0);
     for (int i = 1; i < (int)v.size() + 1; i++) {
+        // for each index of the tree, pass value in the array, so that it will occur a update through all
+        // the position of the tree
         update(i, v[i - 1]);
     }
+}
+
+
+int main()
+{
+    build();
     cout << "From 0 to 5: " << get(5) << endl;
     cout << "From 1 to 6: " << get(6) - get(1) << endl;
     return 0;
