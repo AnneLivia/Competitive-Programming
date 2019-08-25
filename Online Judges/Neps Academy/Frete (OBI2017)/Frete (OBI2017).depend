@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1564776075 source:c:\users\annel\desktop\frete (obi2017)\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+
