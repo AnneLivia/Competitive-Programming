@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1566611710 source:c:\users\annel\desktop\interruptores\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

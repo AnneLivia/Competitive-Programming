@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1568755782 source:c:\users\annel\desktop\jogo de baralho (sbc 2019)\main.cpp
-	<iostream>
-	<vector>
-	<algorithm>
-	<map>
-
