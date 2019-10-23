@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1568397632 source:c:\users\annel\desktop\ladrilhos (sbc 2016)\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
