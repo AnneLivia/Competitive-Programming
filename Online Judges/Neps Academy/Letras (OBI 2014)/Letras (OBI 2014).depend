@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1571963684 source:c:\users\annel\desktop\letras (obi 2014)\main.cpp
+	<iostream>
+	<algorithm>
+	<string>
+
