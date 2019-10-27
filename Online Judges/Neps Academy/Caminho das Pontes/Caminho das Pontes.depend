@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1565563945 source:c:\users\annel\desktop\caminho das pontes\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+	<algorithm>
+
