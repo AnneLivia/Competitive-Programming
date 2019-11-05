@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1565035906 source:c:\users\annel\desktop\Ônibus\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+
