@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1565562577 source:c:\users\annel\desktop\reduzindo detalhes de um mapa\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
