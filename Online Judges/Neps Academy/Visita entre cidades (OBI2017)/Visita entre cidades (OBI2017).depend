@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1565036701 source:c:\users\annel\desktop\visita entre cidades (obi2017)\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+
