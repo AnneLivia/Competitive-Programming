@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572107001 source:c:\users\annel\desktop\g - sem número (ifb)\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
