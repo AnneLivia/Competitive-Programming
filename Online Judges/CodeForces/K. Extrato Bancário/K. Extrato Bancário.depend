@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572112050 source:c:\users\annel\desktop\k. extrato bancário\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+
