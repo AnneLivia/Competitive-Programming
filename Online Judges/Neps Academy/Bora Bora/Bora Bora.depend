@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1579477875 source:c:\users\annel\desktop\competitive programming\neps solutions\bora bora\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+
