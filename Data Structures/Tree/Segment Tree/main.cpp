@@ -107,6 +107,7 @@ public:
     }
 
     // ini and fim represents the interval represented by the node. Complexity of build() is O(N).
+    // O(N) to build
     void constructST (int no, int ini, int fim) {
         // it means we've found a leaf
         if(ini == fim) {
@@ -196,15 +197,13 @@ public:
         by a node is partially inside and partially outside the given range,
         we will return sum of the left child and the right child.
         Complexity of query will be O(logN).
-
     */
 
     int query(int no, int ini, int fim, int i, int j) {
-
         // first check if the range are not inside interval
         if(j < ini || i > fim) {
             // if it ends before the beginning of the interval
-            // of start after the interval
+            // or start after the interval
             // range represented by a node is completely outside the given range
             return 0;
         }
@@ -219,6 +218,15 @@ public:
         int ll = query(2*no, ini, mid, i, j);
         int rr = query(2*no+1, mid+1, fim, i, j);
         return (ll + rr);
+
+        /*
+            Simulation for A = [1,2,4] -> query(1,2) partially inside the give range
+            ll(1) = query(2, 0, 1, 1, 2); -> get ll(2) + rr(2);
+                ll(2) = query(4, 0, 0, 1, 2); -> return 0;
+                rr(2) = query(5, 1,1, 1, 2); -> return 2;
+            rr(1) = query(3, 2, 2, 1, 2); -> return 4;
+            return ll(1) + rr (1) -> 6a
+        */
     }
 };
 
