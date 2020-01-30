@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1580423086 source:c:\users\annel\desktop\competitive programming\neps solutions\2531\main.cpp
+	<iostream>
+	<cmath>
+	<vector>
+	<cstring>
+
+1580426779 source:c:\users\annel\desktop\competitive programming\uri\2531\main.cpp
+	<iostream>
+	<cmath>
+	<vector>
+	<cstdlib>
+	<cstring>
+
