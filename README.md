@@ -73,3 +73,6 @@
   7. **Search Algorithms**: [Implementations](https://github.com/AnneLivia/Competitive-Programming/tree/master/Algorithms/Search)
       - [Binary Search](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Search/Binary%20Search/main.cpp)
       - [Linear Search](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Search/Linear%20Search/main.cpp)
+  8. **Techniques**:
+      - [Two Pointers](https://github.com/AnneLivia/Competitive-Programming/tree/master/Algorithms/Two%20Pointer%20Technique/main.cpp)
+      
