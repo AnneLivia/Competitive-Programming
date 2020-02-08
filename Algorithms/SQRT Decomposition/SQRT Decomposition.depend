@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1581114407 source:c:\users\annel\desktop\competitive programming\neps solutions\sqrt decomposition\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<cstdlib>
+	<cmath>
+

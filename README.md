@@ -76,4 +76,4 @@
       - [Linear Search](https://github.com/AnneLivia/Competitive-Programming/blob/master/Algorithms/Search/Linear%20Search/main.cpp)
   8. **Techniques**:
       - [Two Pointers](https://github.com/AnneLivia/Competitive-Programming/tree/master/Algorithms/Two%20Pointer%20Technique/main.cpp)
-      
+      -[Square Root Decomposition](https://github.com/AnneLivia/Competitive-Programming/tree/master/Algorithms/SQRT%20Decomposition/main.cpp)
