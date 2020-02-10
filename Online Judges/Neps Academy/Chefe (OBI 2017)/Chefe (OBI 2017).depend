@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1581305216 source:c:\users\annel\desktop\competitive programming\neps solutions\chefe (obi 2017)\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<stack>
+	<cstdlib>
+
