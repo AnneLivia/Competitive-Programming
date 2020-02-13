@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1581568360 source:c:\users\annel\desktop\competitive programming\neps solutions\orkut (obi 2004)\main.cpp
+	<iostream>
+	<map>
+	<vector>
+	<algorithm>
+
