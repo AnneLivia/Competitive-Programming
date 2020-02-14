@@ -1,57 +1,72 @@
 #include <iostream>
 #include <vector>
+#include <cstdlib>
 
 using namespace std;
 
-void week(char p) {
-    switch(p) {
-        case '1' :
-        case '2' : cout << "MONDAY\n";
-                   break;
-        case '3' :
-        case '4' : cout << "TUESDAY\n";
-                   break;
-        case '5' :
-        case '6' : cout << "WEDNESDAY\n";
-                   break;
-        case '7' :
-        case '8' : cout << "THURSDAY\n";
-                   break;
-        case '9' :
-        case '0' : cout << "FRIDAY\n";
-                   break;
-    }
-}
-
 int main()
 {
-    int t, ok;
-    string p;
-    cin >> t;
-    cin.ignore();
-    while(t--) {
-        getline(cin,p);
-        ok = 0;
-        if(isalpha(p[0]) && p[0] != tolower(p[0])
-           && isalpha(p[1]) && p[1] != tolower(p[1])
-           && isalpha(p[2]) && p[2] != tolower(p[2])) {
-            if(p[3] == '-') {
-                for(int i = 4; i < (int) p.size(); i++) {
-                    if((p[i] - '0') >= 0 && (p[i] - '0') <= 9) {
-                        ok++;
-                    } else {
-                        break;
+    int n, r, t;
+    cin >> n >> r;
+    vector<int>v(n, 0);
+    vector<int>is;
+    for (int i = 0; i < r; i++) {
+        cin >> t;
+        v[--t] = 1;
+        is.push_back(t);
+    }
+    if (r == 1 && (is[0] == 0 || is[0] == n - 1)) {
+        cout << n - 1 << endl;
+    } else {
+        t = 0;
+        int can = 1, j = 0;
+        vector<int>aux;
+        while(can) {
+            int i = is[j];
+            aux.clear();
+            while (j < (int)is.size()) {
+                j++;
+                int change = 0;
+                if (v[i] == 1) {
+                    if (i - 1 >= 0 && v[i - 1] == 0) {
+                        v[i - 1] = 1;
+                        aux.push_back(i - 1);
                     }
+                    if (i + 1 < n && v[i + 1] == 0) {
+                        v[i + 1] = 1;
+                        change = 2;
+                        aux.push_back(i + 1);
+                    }
+
+                    if (change == 2) {
+                        i = j;
+                    } else {
+                        i = j;
+                    }
+                } else {
+                    i = j;
                 }
-                if(ok == 4)
-                    week(p[7]);
-                else
-                    cout << "FAILURE\n";
-            } else {
-                    cout << "FAILURE\n";
+
+                i = is[j];
             }
-        } else {
-            cout << "FAILURE\n";
+
+            for (auto i : aux)
+                is.push_back(i);
+
+            t++;
+
+            for (int i = 0; i < n; i++) {
+                if (v[i] == 0) {
+                    can = 0;
+                    break;
+                }
+            }
+
+            if (can) {
+                cout << t << endl;
+                break;
+            }
+            can = 1;
         }
     }
     return 0;
