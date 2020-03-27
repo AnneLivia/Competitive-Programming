@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1581137538 source:c:\users\annel\desktop\competitive programming\neps solutions\conversão de inteiro para binário\main.cpp
+	<iostream>
+	<algorithm>
+	<string>
+
