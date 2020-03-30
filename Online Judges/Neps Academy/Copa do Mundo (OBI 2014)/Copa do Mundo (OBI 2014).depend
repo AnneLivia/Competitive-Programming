@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1581194895 source:c:\users\annel\desktop\competitive programming\neps solutions\copa do mundo (obi 2014)\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
