@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1581139216 source:c:\users\annel\desktop\competitive programming\neps solutions\figurinhas da copa (obi 2018)\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+
