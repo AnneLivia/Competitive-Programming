@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1587412242 source:c:\users\annel\desktop\doubly linked list (implemented with struct)\doublylinkedlist.cpp
+	"doublylinkedlist.h"
+	<iostream>
+
+1587367830 c:\users\annel\desktop\doubly linked list (implemented with struct)\doublylinkedlist.h
+	<cstdlib>
+
+1587412236 source:c:\users\annel\desktop\doubly linked list (implemented with struct)\main.cpp
+	<iostream>
+	"doublylinkedlist.h"
+
