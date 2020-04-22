@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1587536101 source:c:\users\annel\desktop\circular linked list (implemented with struct)\circularlinkedlist.cpp
+	"circularlinkedlist.h"
+	<iostream>
+
+1587413405 c:\users\annel\desktop\circular linked list (implemented with struct)\circularlinkedlist.h
+	<cstdlib>
+
+1587536028 source:c:\users\annel\desktop\circular linked list (implemented with struct)\main.cpp
+	<iostream>
+	"circularlinkedlist.h"
+
