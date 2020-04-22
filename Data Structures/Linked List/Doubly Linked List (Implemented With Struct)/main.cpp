@@ -23,8 +23,8 @@ int main()
     // inserting sorted
 
     insert_sorted(h, 1);
-    insert_sorted(h, 2);
-    insert_sorted(h, 3);
+    insert_sorted(h, 10);
+    insert_sorted(h, 9);
 
     cout << "Showing elements: ";
     for(int i = 1; i <= listSize(h); i++) {
